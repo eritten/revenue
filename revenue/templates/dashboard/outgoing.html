@@ -1,5 +1,10 @@
 {% extends "base_dashboard.html" %}
 {% block content %}
-<h1>You have logged out successfully.</h1>
+<form>
+{% csrf_token %}
+{{form}}
+<br/>
+<input type="submit" />
 
+</form>
 {% endblock %}

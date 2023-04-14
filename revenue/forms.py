@@ -1,8 +1,13 @@
 from django.forms import ModelForm
-from .models import Expenditure
+from .models import Incoming, Outgoing
 
 
-class SignUpForm(ModelForm):
+class OutgoingForm(ModelForm):
     class Meta:
-        model = Expenditure
-        fields = '__all__'
+        model = Outgoing
+        fields = ["product_name", "money_spent", "product_image"]
+
+class IncomingForm(ModelForm):
+    class Meta:
+        model = Incoming
+        fields = ["product_name", "money_received", "product_image"]
