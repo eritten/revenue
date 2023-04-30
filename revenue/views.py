@@ -5,7 +5,7 @@ from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.models import User
 from django.contrib import messages
 from .forms import IncomingForm, OutgoingForm
-
+from .models import Incoming, Outgoing
 # Create your views here.
 
 def log_in(request):
@@ -26,15 +26,17 @@ def log_out(request):
 
 @login_required
 def dashboard(request):
-    return render(request, "dashboard/dashboard.html")
+    return render(request, "dashboard/dashboard.html", {"incoming": Incoming.objects.all(), "outgoing": Outgoing.objects.all()})
 
 @login_required
 def incoming(request):
     form = IncomingForm()
     if request.method=="POST":
-        form = IncomingForm(request.POST)
+        form = IncomingForm(request.POST, request.FILES)
         if form.is_valid():
             form.save()
+            messages.success(request, "Record added")
+
         return render(request, "dashboard/incoming.html", {"form": form})
     return render(request, "dashboard/incoming.html", {"form": form})
 
@@ -43,9 +45,11 @@ def incoming(request):
 def outgoing(request):
     form = OutgoingForm()
     if request.method=="POST":
-        form = OutgoingForm(request.POST)
+        form = OutgoingForm(request.POST, request.FILES)
         if form.is_valid():
             form.save()
+            messages.success(request, "Record added")
+
         return render(request, "dashboard/outgoing.html", {"form": form})
     return render(request, "dashboard/outgoing.html", {"form": form})
 

@@ -5,7 +5,7 @@ from .models import Incoming, Outgoing
 class OutgoingForm(ModelForm):
     class Meta:
         model = Outgoing
-        fields = ["product_name", "money_spent", "product_image"]
+        fields = ["product_name", "money_spent", "product_image", "reason"]
 
 class IncomingForm(ModelForm):
     class Meta:
