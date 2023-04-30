@@ -32,7 +32,22 @@
 
 <h1>Incoming</h1>
 <table>
-
+<tr>
+    <th>Product name</th>
+    <th>Money spent</th>
+    <th>Date</th>
+<th>Image</th>
+<th>Reason</th>
+</tr>
+{% for product in outgoing %}
+<tr>
+    <td>{{product.product_name}}</td>
+<td>{{product.money_recieved}}</td>
+    <td>{{product.date}}</td>
+    <td><img src="{{product.image.url}}" /></td>
+    <td>{{product.reason}}</td>
+</tr>
+{% endfor %}
 </table>
 <a href="{% url 'incoming' %}">Enter data</a>
 
