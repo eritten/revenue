@@ -187,26 +187,28 @@ body {
     color: var(--indigo);
 }
 .table-wrapper table thead td {
-    padding: 5px 5px 20px 5px;
+    padding: 5px 5px 30px 5px;
 }
 .table-wrapper table tbody td {
     font-size: 1.8rem;
     padding: 10px 0;
     text-transform: capitalize;
-    border-bottom: 1px solid black;
     color: rgb(46, 43, 43);
+}
+.table-wrapper table tbody tr:not(:last-child) {
+    border-bottom: 1px solid black;
 }
 .table-wrapper table thead td:nth-child(1),
 .table-wrapper table thead td:nth-child(3),
 .table-wrapper table thead td:nth-child(4)
 {
-    padding-bottom: 2rem;
     text-align: start;
 }
 .table-wrapper table tbody td:nth-child(3) {
     white-space: nowrap;
-    max-width: 100px;
+    max-width: 85px;
     overflow: hidden;
+    font-size: 1.5rem;
 }
 .table-wrapper table thead td:nth-child(2),
 .table-wrapper table tbody td:nth-child(2),
@@ -224,8 +226,10 @@ body {
     overflow-y: scroll;
     max-height: 50px;
 }
-.table-wrapper table thead tr:last-child,
-.table-wrapper table tbody tr:last-child,
+.money {
+    color: rgb(7, 95, 7)!important;
+    font-weight: bold!important;
+}
 /* end of table */
 .btn-box {
     margin: 2rem 0;
@@ -243,6 +247,11 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
+    gap: 2rem;
+}
+.upload-container h2 {
+    text-transform: uppercase;
 }
 .upload-container form {
     max-width: 450px;
@@ -318,7 +327,7 @@ footer .info-box h4 {
 footer .made {
     text-align: center;
     margin-top: 2rem;
-    border-top: 1px solid var(--lightCream);
+    border-top: 3px solid var(--lightCream);
     padding: 1rem;
     font-size: 2rem;
 }

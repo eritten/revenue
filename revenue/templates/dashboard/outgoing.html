@@ -1,6 +1,7 @@
 {% extends "base_dashboard.html" %}
 {% block content %}
 <div class="upload-container">
+    <h2>outgoing data</h2>
     <form action="{% url 'outgoing' %}" method="POST" enctype="multipart/form-data">
     {% csrf_token %}
     {{form}}

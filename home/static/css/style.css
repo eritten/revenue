@@ -776,7 +776,7 @@ footer .info-box h4 {
 footer .made {
     text-align: center;
     margin-top: 2rem;
-    border-top: 1px solid var(--lightCream);
+    border-top: 3px solid var(--lightCream);
     padding: 1rem;
     font-size: 2rem;
 }

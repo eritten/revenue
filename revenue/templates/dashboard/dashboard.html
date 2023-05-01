@@ -4,6 +4,7 @@
 <nav class="dash-nav">
     <h4>{{request.user.username}}</h4>
     <a href="{% url 'logout' %}">Logout</a>
+    <a href="{% url 'home' %}" style="color: blueviolet;">HOME</a>
 </nav>
 <!-- nav -->
 <main class="main-page">
@@ -25,7 +26,7 @@
                         {% for product in outgoing %}
                         <tr>
                             <td>{{product.product_name}}</td>
-                            <td>{{product.money_spent}}</td>
+                            <td class="money">GHC {{product.money_spent}}</td>
                             <td>{{product.date}}</td>
                             <td>
                                 <img src="{{product.image.url}}" />
