@@ -46,6 +46,26 @@
         <!-- incoming table -->
         <h1 class="title">Incoming</h1>
         <table>
+                    <thead>
+                        <tr>
+                            <td>Product name</td>
+                            <td>amount</td>
+                            <td>Date</td>
+                            <td>Image</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for product in outgoing %}
+                        <tr>
+                            <td>{{product.product_name}}</td>
+                            <td>{{product.money_recieved}}</td>
+                            <td>{{product.date}}</td>
+                            <td>
+                                <img src="{{product.image.url}}" />
+                            </td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
         
         </table>
         <div class="btn-box">
