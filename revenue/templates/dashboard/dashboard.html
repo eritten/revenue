@@ -18,7 +18,6 @@
                             <td>Product name</td>
                             <td>amount</td>
                             <td>Date</td>
-                            <td>Image</td>
                             <td>Reason</td>
                         </tr>
                     </thead>
@@ -26,11 +25,8 @@
                         {% for product in outgoing %}
                         <tr>
                             <td>{{product.product_name}}</td>
-                            <td class="money">GHC {{product.money_spent}}</td>
+                            <td class="money">GHC <span class="price">{{product.money_spent}}</span></td>
                             <td>{{product.date}}</td>
-                            <td>
-                                <img src="{{product.image.url}}" />
-                            </td>
                             <td>{{product.reason}}</td>
                         </tr>
                         {% endfor %}
@@ -38,41 +34,36 @@
                 </table>
                 <!-- end of table for outgoing -->
             </div>
-        </table>
         <div class="btn-box">
             <a href="{% url 'outgoing' %}" class="all-btns">Enter data</a>
         </div>
+        <br>
+        <br>
         
-        <!-- incoming table -->
         <h1 class="title">Incoming</h1>
-        <table>
-                    <thead>
-                        <tr>
-                            <td>Product name</td>
-                            <td>amount</td>
-                            <td>Date</td>
-                            <td>Image</td>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        {% for product in outgoing %}
-                        <tr>
-                            <td>{{product.product_name}}</td>
-                            <td>{{product.money_recieved}}</td>
-                            <td>{{product.date}}</td>
-                            <td>
-                                <img src="{{product.image.url}}" />
-                            </td>
-                        </tr>
-                        {% endfor %}
-                    </tbody>
-        
-        </table>
+        <div class="table-wrapper">
+            <!-- table for incoming -->
+            <table>
+                <thead>
+                    <tr>
+                        <td>Product name</td>
+                        <td>amount</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for product in incoming %}
+                    <tr>
+                        <td>{{product.product_name}}</td>
+                        <td class="money">GHC <span class="price">{{product.money_recieved}}</span></td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+            <!-- end of table for outgoing -->
+        </div>
         <div class="btn-box">
             <a href="{% url 'incoming' %}" class="all-btns">Enter data</a>
         </div>
-        <!-- end of incoming table -->
-        
     </div>
 </main>
 

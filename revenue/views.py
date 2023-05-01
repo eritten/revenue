@@ -36,7 +36,7 @@ def incoming(request):
         if form.is_valid():
             form.save()
             messages.success(request, "Record added")
-            redirect("home")
+            return redirect("dashboard")
         return render(request, "dashboard/incoming.html", {"form": form})
     return render(request, "dashboard/incoming.html", {"form": form})
 
@@ -49,7 +49,7 @@ def outgoing(request):
         if form.is_valid():
             form.save()
             messages.success(request, "Record added")
-            redirect("home")
+            return redirect("dashboard")
         return render(request, "dashboard/outgoing.html", {"form": form})
     return render(request, "dashboard/outgoing.html", {"form": form})
 

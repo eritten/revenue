@@ -174,11 +174,14 @@ body {
     max-height: 900px;
     overflow: hidden;
     overflow-y: scroll;
+    overflow-x: scroll;
 } 
 .table-wrapper table {
     width: 100%;
     border-collapse: collapse;   
     min-height: 100px; 
+    min-width: 760px;
+    overflow-x: auto;
 }
 .table-wrapper table thead {
     font-size: 2.2rem;
@@ -199,7 +202,7 @@ body {
     border-bottom: 1px solid black;
 }
 .table-wrapper table thead td:nth-child(1),
-.table-wrapper table thead td:nth-child(3),
+.table-wrapper table thead td:nth-child(2),
 .table-wrapper table thead td:nth-child(4)
 {
     text-align: start;
@@ -212,14 +215,14 @@ body {
 }
 .table-wrapper table thead td:nth-child(2),
 .table-wrapper table tbody td:nth-child(2),
-.table-wrapper table thead td:nth-child(5) {
+.table-wrapper table thead td:nth-child(4) {
     text-align: end;
 }
 .table-wrapper table thead td:nth-child(2),
 .table-wrapper table tbody td:nth-child(2) {
     padding-right: 20px;
 }
-.table-wrapper table tbody td:nth-child(5){
+.table-wrapper table tbody td:nth-child(4){
     text-align: end;
     max-width: 200px;
     overflow: hidden;

@@ -13,4 +13,11 @@ window.addEventListener("load", () => {
     const navSticky = document.querySelector(".dash-nav")
     navSticky.classList.toggle("sticky", window.scrollY > 100)
   }) 
+
+  // prices are comma-seperated
+  const commaSeperated = document.querySelectorAll(".price")
+    commaSeperated.forEach((number)=>{
+      const comma = Number(number.innerText).toLocaleString("en")
+      number.innerText = comma
+    })
 });
