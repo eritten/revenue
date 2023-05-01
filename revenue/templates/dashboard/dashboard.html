@@ -1,56 +1,58 @@
 {% extends "base_dashboard.html" %}
 {% block content %}
-<a href="{% url 'logout' %}">Logout</a>
-<br/>
-
-<h1>{{request.user.username}} welcome <h1>
-<h1>Outgoing<h1>
-
-<table>
-<tr>
-    <th>Product name</th>
-    <th>Money spent</th>
-    <th>Date</th>
-<th>Image</th>
-<th>Reason</th>
-</tr>
-{% for product in outgoing %}
-<tr>
-    <td>{{product.product_name}}</td>
-<td>{{product.money_spent}}</td>
-    <td>{{product.date}}</td>
-    <td><img src="{{product.image.url}}" /></td>
-    <td>{{product.reason}}</td>
-</tr>
-{% endfor %}
-</table>
-<a href="{% url 'outgoing' %}">Enter data</a>
-
-
-<h3>Stats</h3>
-<hr/>
-
-<h1>Incoming</h1>
-<table>
-<tr>
-    <th>Product name</th>
-    <th>Money spent</th>
-    <th>Date</th>
-<th>Image</th>
-<th>Reason</th>
-</tr>
-{% for product in incoming%}
-<tr>
-    <td>{{product.product_name}}</td>
-<td>{{product.money_recieved}}</td>
-    <td>{{product.date}}</td>
-    <td><img src="{{product.image.url}}" /></td>
-    <td>{{product.reason}}</td>
-</tr>
-{% endfor %}
-</table>
-<a href="{% url 'incoming' %}">Enter data</a>
-
-<h3>Stats</h3>
+<!-- nav -->
+<nav class="dash-nav">
+    <h4>{{request.user.username}}</h4>
+    <a href="{% url 'logout' %}">Logout</a>
+</nav>
+<!-- nav -->
+<main class="main-page">
+    <div class="section-wrapper">
+        <h1 class="title">Outgoing<h1>
+            <div class="table-wrapper">
+                <!-- table for outgoing -->
+                <table>
+                    <thead>
+                        <tr>
+                            <td>Product name</td>
+                            <td>amount</td>
+                            <td>Date</td>
+                            <td>Image</td>
+                            <td>Reason</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for product in outgoing %}
+                        <tr>
+                            <td>{{product.product_name}}</td>
+                            <td>{{product.money_spent}}</td>
+                            <td>{{product.date}}</td>
+                            <td>
+                                <img src="{{product.image.url}}" />
+                            </td>
+                            <td>{{product.reason}}</td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+                <!-- end of table for outgoing -->
+            </div>
+        </table>
+        <div class="btn-box">
+            <a href="{% url 'outgoing' %}" class="all-btns">Enter data</a>
+        </div>
+        
+        <!-- incoming table -->
+        <h1 class="title">Incoming</h1>
+        <table>
+        
+        </table>
+        <div class="btn-box">
+            <a href="{% url 'incoming' %}" class="all-btns">Enter data</a>
+        </div>
+        <!-- end of incoming table -->
+        
+    </div>
+</main>
 
 {% endblock %}
