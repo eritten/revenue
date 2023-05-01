@@ -1,10 +1,10 @@
 {% extends "base_dashboard.html" %}
 {% block content %}
-<form action="{% url 'outgoing' %}" method="POST" enctype="multipart/form-data">
-{% csrf_token %}
-{{form}}
-<br/>
-<input type="submit" />
-
-</form>
-{% endblock %}
+<div class="upload-container">
+    <form action="{% url 'outgoing' %}" method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{form}}
+    <input type="submit" class="all-btns"/>
+    </form>
+</div>
+{% endblock %} 

@@ -1,13 +1,44 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam soluta ipsam nostrum animi consequatur blanditiis quidem deleniti, maxime exercitationem unde impedit ut expedita sapiente molestias tempore enim dolorem aliquam temporibus?">
     <title>Home page</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/aos.css' %}">
+    <script src="{% static 'js/all.js' %}"></script>
 </head>
 <body>
     {% block content %}
     {% endblock %}
+    <!-- footer section -->
+ <footer>
+    <div class="footer-wrapper">
+        <div class="info-box">
+            <div class="about">
+                <h4>About</h4>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt culpa deleniti accusamus ipsum voluptatibus amet dicta autem voluptate quo.</p>
+            </div>
+            <div class="information">
+                <h4>information</h4>
+                <ul>
+                   <li>
+                       <a href="#">privacy policy</a>
+                   </li>
+                   <li>
+                       <a href="#">terms & conditions</a>
+                   </li>
+               </ul>
+            </div>
+        </div>
+        <p class="made">powered by sewonet</p>
+    </div>
+</footer>
+<!-- end of footer section -->
+    <script src="{% static 'js/main.js' %}"></script>
+    <script src="{% static 'js/aos.js' %}"></script>
 </body>
 </html>

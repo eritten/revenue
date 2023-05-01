@@ -1,0 +1,190 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+  <!-- header and nav -->
+  <header id="home">
+    <nav>
+        <div class="logo-box">
+            <h1>Poultry</h1>
+        </div>
+        <button class="menutoggle" aria-label="menu button">
+            <i class="fas fa-bars"></i>
+        </button>
+        <ul class="nav-list">
+            <li>
+                <a href="#home">Home</a>
+            </li>
+            <li>
+                <a href="#about">About</a>
+            </li>
+            <li>
+                <a href="#services">Services</a>
+            </li>
+            <li>
+                <a href="#contact">Contact</a>
+            </li>
+        </ul>
+    </nav>
+    <div class="header-content">
+        <div class="text-box">
+            <h2>Earnwin provides the best service for poultry</h2>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Natus illum non aliquam, eum nisi ipsa repudiandae facilis culpa id in.</p>
+            <a href="#contact" class="all-btns">Contact us</a>
+        </div>
+        <div class="img-box">
+            <img src="{% static 'img/gif1.gif' %}" class="big-img" alt="A georgeous female chicken eating.">
+            <img src="{% static 'img/img4.jpg' %}" class="icon" alt="icon 1" style="border-radius: 10px;">
+        </div>
+    </div>
+</header>
+<!-- end of header and nav -->
+<!-- about us section --> 
+<section id="about" class="about">
+    <div class="section-wrapper">
+        <h4 class="head-top">about us</h4>
+        <h2 class="heading">Why Earnwin is the best</h2>
+        <div class="about-wrapper">
+            <div class="img-box">
+                <img src="{% static 'img/img1.jpg' %}" alt="a happy chicken" class="about-img">
+                <img src="{% static 'img/img4.jpg' %}" class="icon" alt="icon 2" style="border-radius: 10px;">
+            </div>
+            <div class="content-box">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore minima odit possimus, ipsum vel quas nulla, voluptatibus saepe atque natus quibusdam itaque obcaecati dolore dignissimos temporibus non facere unde sed.</p>
+                <div class="about-list-box">
+                    <h4>Lorem ipsum dolor sit amet.</h4>
+                    <ul class="about-list">
+                        <li>Lorem, ipsum dolor.</li>
+                        <li>Lorem, ipsum dolor.</li>
+                        <li>Lorem, ipsum dolor.</li>
+                        <li>Lorem, ipsum dolor.</li>
+                        <li>Lorem, ipsum dolor.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- end of about us section -->
+ <!-- services section -->
+ <section id="services" class="services">
+    <div class="section-wrapper">
+        <h4 class="head-top">services</h4>
+        <h2 class="heading">what earnwin pet provides</h2>
+        <div class="services-wrapper">
+            <div class="service-flex">
+                <!-- start -->
+                <div class="box">
+                    <div class="img-box">
+                        <img src="{% static 'img/img3.jpg' %}" alt="chicken">
+                    </div>
+                    <div class="text-box">
+                        <h4>poultry farm</h4>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fuga saepe voluptatem aperiam! Adipisci, repellat earum? Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus eveniet necessitatibus voluptates voluptatum nemo libero hic mollitia, quidem eius quasi maiores consectetur harum, dignissimos eligendi excepturi ad id. Optio, mollitia.</p>
+                    </div>
+                </div>
+                <!-- end -->
+                <!-- start -->
+                <div class="box">
+                    <div class="img-box">
+                        <img src="{% static 'img/img1.jpg' %}" alt="chicken">
+                    </div>
+                    <div class="text-box">
+                        <h4>rooster</h4>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fuga saepe voluptatem aperiam! Adipisci, repellat earum?</p>
+                    </div>
+                </div>
+                <!-- end -->
+                <!-- start -->
+                <div class="box">
+                    <div class="img-box">
+                        <img src="{% static 'img/img4.jpg' %}" alt="chicken">
+                    </div>
+                    <div class="text-box">
+                        <h4>overnight care</h4>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fuga saepe voluptatem aperiam! Adipisci, repellat earum?</p>
+                    </div>
+                </div>
+                <!-- end -->
+                <!-- start -->
+                <div class="box">
+                    <div class="img-box">
+                        <img src="{% static 'img/img2.jpeg' %}" alt="chicken">
+                    </div>
+                    <div class="text-box">
+                        <h4>healthcare</h4>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fuga saepe voluptatem aperiam! Adipisci, repellat earum?</p>
+                    </div>
+                </div>
+                <!-- end -->
+            </div>
+            <!-- stats -->
+            <div class="service-stats-wrapper">
+                <div class="box">
+                    <h2>1m+</h2>
+                    <p>happy clients</p>
+                </div>
+                <div class="box">
+                    <h2>20k</h2>
+                    <p>healthy poultry</p>
+                </div>
+                <div class="box">
+                    <h2>24/7</h2>
+                    <p>customer help</p>
+                </div>
+                <div class="box">
+                    <h2>15+</h2>
+                    <p>breeds</p>
+                </div>
+            </div>
+            <!-- end of stats -->
+        </div>
+    </div>
+</section>
+<!-- end of services section -->
+<!-- contact us section -->
+<section id="contact" class="contact">
+    <div class="section-wrapper">
+        <div class="contact-wrapper">
+            <div class="contact-text-box">
+                <h2>contact us</h2>
+                <p class="para">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur odio, illum eaque dicta voluptatum in.</p>
+                <div class="info-box">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <p>accra str, 455 gh</p>
+                </div>
+                <div class="info-box">
+                    <i class="fas fa-envelope"></i>
+                    <p>whatever@gmail.com</p>
+                </div>
+                <div class="info-box">
+                    <i class="fas fa-phone"></i>
+                    <p>+233 111 222 111</p>
+                </div>
+                <div class="social-box">
+                    <a href="#n" aria-label="facebook">
+                        <i class="fab fa-facebook"></i>
+                    </a>
+                    <a href="#n" aria-label="instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="form-box">
+                <div class="anime-wrapper">
+                    <div class="img-box">
+                        <img src="{% static 'img/img5.jpg' %}" alt="icon 3">
+                    </div>
+                    <div class="anime-box"></div>
+                </div>
+                <form action="#" class="contact-form">
+                    <input type="text" placeholder="Name">
+                    <input type="email" placeholder="Email">
+                    <textarea placeholder="Message"></textarea>
+                    <input type="submit" value="Send">
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- end of contact us section -->
+{% endblock %}
