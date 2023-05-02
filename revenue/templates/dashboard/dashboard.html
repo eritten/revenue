@@ -47,6 +47,7 @@
                 <thead>
                     <tr>
                         <td>Product name</td>
+                        <td>date</td>
                         <td>amount</td>
                     </tr>
                 </thead>
@@ -54,7 +55,9 @@
                     {% for product in incoming %}
                     <tr>
                         <td>{{product.product_name}}</td>
+                        <td>{{product.date}}</td>
                         <td class="money">GHC <span class="price">{{product.money_recieved}}</span></td>
+
                     </tr>
                     {% endfor %}
                 </tbody>
